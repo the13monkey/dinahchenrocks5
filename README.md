@@ -2,7 +2,7 @@
 ### This is a redesign of my personal profile website. At this time, website url changes from Dinahchen.Rocks to Dinahchen.com
 ### Features of this version are as below: 
 - Frontend 
-  - JavaScript empowered typewritter effect
+  - JavaScript powered typewritter effect
   - CSS animated SVG drawing and progress bar
   - Custom scroll bar
   - Custom mouse cursor
