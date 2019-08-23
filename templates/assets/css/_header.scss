@@ -1,0 +1,13 @@
+.navbar {
+    a:hover {
+        color: $bs-secondary !important; 
+    }
+    #trigger-container {
+        span {
+            position: absolute; 
+            top: 2rem;
+            margin-left: 50px;
+        }
+    }
+}
+

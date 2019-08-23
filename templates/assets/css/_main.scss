@@ -1,0 +1,53 @@
+//Colors
+$bs-primary: #007bff;
+$bs-secondary: #6c757d;
+$bs-danger: #dc3545;
+$bs-light: #f8f9fa;
+$bs-dark: #343a40; 
+$bs-offwhite: rgb(248, 249, 250);
+
+//Fonts
+* {
+    color: $bs-dark; 
+}
+
+//All Styles
+a {
+    text-decoration: none !important; 
+    transition: all .3s linear; 
+}
+
+//Custom Cursor 
+#cursor, .mh {
+    display: none; 
+}
+@media screen and (min-width: 840px) {
+    .mh {
+        display: block; 
+    }
+    #cursor {
+        display: block; 
+        width: 30px;
+        height: 30px;
+        border: 5px solid $bs-danger;
+        border-radius: 50%;
+        position: absolute; 
+        transition-duration: 200ms;
+        transition-timing-function: ease-out;
+        animation: pulse .5s infinite alternate; 
+        pointer-events: none;
+        z-index: 3; 
+        opacity: 1; 
+    }
+    #cursor::before {
+        content: '';
+        width: 36px;
+        height: 36px;
+        position: absolute; 
+        border: 12px solid $bs-dark; 
+        border-radius: 50%; 
+        opacity: .1; 
+        top: -8px;
+        left: -8px;
+    }
+}

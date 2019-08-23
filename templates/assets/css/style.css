@@ -1,0 +1,264 @@
+* {
+  color: #343a40;
+}
+
+a {
+  text-decoration: none !important;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#cursor, .mh {
+  display: none;
+}
+
+@media screen and (min-width: 840px) {
+  .mh {
+    display: block;
+  }
+  #cursor {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 5px solid #dc3545;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transition-duration: 200ms;
+            transition-duration: 200ms;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+    -webkit-animation: pulse .5s infinite alternate;
+            animation: pulse .5s infinite alternate;
+    pointer-events: none;
+    z-index: 3;
+    opacity: 1;
+  }
+  #cursor::before {
+    content: '';
+    width: 36px;
+    height: 36px;
+    position: absolute;
+    border: 12px solid #343a40;
+    border-radius: 50%;
+    opacity: .1;
+    top: -8px;
+    left: -8px;
+  }
+}
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw-stroke {
+  -webkit-animation-name: draw;
+          animation-name: draw;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: cubic-bezier();
+          animation-timing-function: cubic-bezier();
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  stroke-dashoffset: 800;
+  stroke-dasharray: 800;
+}
+
+.delay0 {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.delay1 {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+.delay2 {
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+  100% {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+    -webkit-transform-origin: center center;
+            transform-origin: center center;
+  }
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideUp {
+  -webkit-animation-name: slideUp;
+          animation-name: slideUp;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+@-webkit-keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes pulse {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@-webkit-keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.navbar a:hover {
+  color: #6c757d !important;
+}
+
+.navbar #trigger-container span {
+  position: absolute;
+  top: 2rem;
+  margin-left: 50px;
+}
+
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron #subtitle {
+  font-size: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.lang {
+  cursor: pointer;
+  position: relative;
+}
+
+.lang h3 span {
+  position: absolute;
+  right: 0;
+  top: 0.75rem;
+}
+
+.lang .bar {
+  height: 10px;
+  opacity: .8;
+}
+
+.lang .bar div {
+  height: 10px;
+  left: 0;
+  width: 100%;
+  -webkit-animation: progress 0.5s linear;
+          animation: progress 0.5s linear;
+}
+
+.lang:last-child {
+  padding-bottom: 0 !important;
+  margin-bottom: -5rem !important;
+}
+/*# sourceMappingURL=style.css.map */
