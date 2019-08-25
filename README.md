@@ -8,8 +8,9 @@
   - Custom mouse cursor
 - Backend
   - PHP OOP enabled basic MVC file structure
-  - JavaScript manipulated URL returns dynamic content from database
+  - JavaScript manipulated DOM returns dynamic content from database
   - Flexible use of MySQL SELECT and JOIN statements
+  - Loops, loops inside loops inside loops inside loops :P
 ### Web development languages involved in this version include:
 - PHP, JavaScript/jQuery, Sass     
-### Project Date: July - August 2019
+### Project Date: July - August 2019h

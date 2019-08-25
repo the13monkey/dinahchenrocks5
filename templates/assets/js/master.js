@@ -18,7 +18,7 @@ var j = 0;
 var title = "Hi, I\'m Dinah."; //length: 14
 var subtitle = "I\'m a full-stack web developer."; //length: 31  
 var speed_title = 50;
-var speed_subtitle = 100;
+var speed_subtitle = 50;
 
 function typeTitle()
 {
@@ -38,17 +38,61 @@ var type_subtitle = function typeSubtitle()
   }
 }
 
-typeTitle();
-setTimeout(type_subtitle, 800);
+typeTitle(); 
+setTimeout(type_subtitle, 500);
 
 /* jQuery Liberary */
 init();
 
-dynamicProjects();
+$('#trigger-container').click(function()
+{
+  showCloseContainer();
+  showAllProjects();
+});
+
+$('#close-container').click(function()
+{
+  init();
+  
+});
+
+$('.lang').click(function()
+{
+  $('body,html').animate({
+    scrollTop: 0
+  }, 300);
+  let idValue = $(this).attr('id');
+  dynamicProjects(idValue);
+});
 
 function init()
-{
+{ 
+    styleReady();
     showTriggerContainer();
+    backTop();
+}
+
+function styleReady()
+{
+  $('.jumbotron').hide();
+  $('#home').show();
+
+  $('.py-5').hide();
+  $('#home-wrapper').show();
+
+  $('#close-container').hide();
+  $('#close-container span').hide();
+
+}
+
+function backTop()
+{
+  $('#back-to-top').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 800);
+    return false;
+  });
 }
 
 function showTriggerContainer()
@@ -68,8 +112,46 @@ function showTriggerContainer()
       },3000);
 }
 
-function dynamicProjects()
+function showCloseContainer()
+{
+    $('#close-container').show();
+    $('#trigger-container').fadeOut();
+    $('#trigger-container span').slideUp();
+    $('#close-circle').addClass('draw-stroke delay0');
+    $('#cross1').addClass('draw-stroke delay1');
+    $('#cross2').addClass('draw-stroke delay2');
+    setTimeout(function(){
+      $('#close-container span').slideDown();
+    }, 1300);
+    setTimeout(function(){
+      $('#close-circle').removeClass('draw-stroke delay0');
+      $('#cross1').removeClass('draw-stroke delay1');
+      $('#cross2').removeClass('draw-stroke delay2');
+    },3000);
+}
+
+function showAllProjects()
 {
   $('.jumbotron').hide();
-  $('#all').show();
+  $('#all').show(); //Add slideIn effect
+
+  $('.py-5').hide();
+  $('#all-wrapper').show(); //Add slideIn effect
+}
+
+function dynamicProjects(language)
+{
+  let sectionId = '#'+language; 
+  let pyId = '#'+language+'-wrapper';
+
+  $('.jumbotron').hide();
+  $(sectionId).fadeIn(500);
+
+
+  $('.py-5').hide();
+  $(pyId).find('.card').delay(800).addClass('slideUp');
+  $(pyId).show();
+
+  showCloseContainer();
+  
 }

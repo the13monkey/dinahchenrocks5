@@ -2,12 +2,22 @@
     a:hover {
         color: $bs-secondary !important; 
     }
-    #trigger-container {
+    #trigger-container, #close-container {
         span {
             position: absolute; 
             top: 2rem;
             margin-left: 50px;
         }
+    }
+    #trigger-icon:hover #trigger-rect {
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier();
+    }
+    #close-icon:hover #close-rect {
+        animation-name: rotate;
+        animation-duration: 1s;
+        animation-timing-function: cubic-bezier();
     }
 }
 

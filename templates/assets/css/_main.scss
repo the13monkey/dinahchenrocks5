@@ -10,11 +10,22 @@ $bs-offwhite: rgb(248, 249, 250);
 * {
     color: $bs-dark; 
 }
+@media only screen and (max-width: 400px) {
+    .display-3 {font-size: 3rem;}
+}
 
 //All Styles
 a {
     text-decoration: none !important; 
     transition: all .3s linear; 
+}
+.btn:hover i {
+    color: $bs-offwhite !important; 
+    transition: all .3s linear; 
+}
+main {
+    width: 100%;
+    overflow-x: hidden; 
 }
 
 //Custom Cursor 

@@ -27,12 +27,26 @@
                 </div>
                 <span class="text-light">All Projects</span>
             </div>
+            <div id="close-container">
+                <div id="close-icon">
+                    <svg height="40" width="40">
+                        <circle id="close-circle" cx="20" cy="20" r="18" style="stroke: #fff; stroke-width: 2px; fill: transparent" />
+                        <g id="close-rect" stroke="#fff" stroke-width="2" fill="none">
+                            <path id="cross1" stroke-linecap="round" d="M12 12 28 28" />
+                            <path id="cross2" stroke-linecap="round" d="M12 28 28 12" />
+                        </g>
+                    </svg>
+                </div>
+                <span class="text-light">Back home</span>
+            </div>
             <div class="mh">
                 <a href="#" download class="mr-2 text-white">Resume</a>
                 <a href="#" target="_blank" class="ml-2 text-white"><i class="fab fa-github text-white mr-2"></i>GitHub</a>
             </div>
         </div>   
     </div>
+
+    
 
     <main role="main">
   

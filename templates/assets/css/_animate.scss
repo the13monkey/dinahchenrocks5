@@ -71,3 +71,48 @@
         width: 100%;
     }
 }
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.slideOut {
+    animation-name: slideOut;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1; 
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.slideIn {
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1; 
+    }
+}
